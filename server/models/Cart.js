@@ -1,32 +1,15 @@
 const { Schema, model, Mongoose } = require('mongoose');
-const User = require('./User');
 
-const cartItemSchema = new Schema({
-    product: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Product',
-    },
-],
-    quantity: {
-        type: Number,
-        default: 0,
-    },
-    itemPrice: {
-        type: Number,
-        default: 0.00,
-    },
-});
 
-module.exports = Mongoose.model("CartItem", cartItemSchema);
 
 const cartSchema = new Schema({
     allCartProducts: [{
         type: Mongoose.Types.ObjectId,
-        ref: 'CartItem'
+        ref: 'Product'
     }],
     user: {
         type: Schema.Types.ObjectId,
-        ref: User,
+        ref: 'User',
         required: false,
     },
     updated: new Date,
@@ -48,4 +31,6 @@ const cartSchema = new Schema({
     },
 });
 
-module.exports = Mongoose.model('Cart', cartSchema);
+const Cart = model("Cart", cartSchema);
+
+module.exports = Cart;
