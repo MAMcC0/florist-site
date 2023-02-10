@@ -25,7 +25,11 @@ const resolvers = {
         //fix me query
         me: async (parent, args, context) => {
             if (context.user) {
+                const userData = await User.findOne({_id: context.user._id}).select('-__v -password');
 
+                return userData;
+            } else {
+                throw new AuthenticationError('Not logged in');
             }
         },
         //TODO: Need all delivery orders
@@ -334,6 +338,12 @@ const resolvers = {
                         user: context._id}},
 
             ).populate('cart', 'address');
+
+            const updatedUser = await User.findOneAndUpdate(
+                {_id: context._id},
+                {$push: {order: updatedOrder}},
+                {new: true}
+            )
         
             return updatedOrder;
         } catch (error) {
