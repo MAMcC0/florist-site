@@ -5,6 +5,7 @@ const Category = require('./category');
 const Cart = require('./cart');
 const Address = require('./address');
 
+//Exporting models
 module.exports = { 
     User,
     Product,
