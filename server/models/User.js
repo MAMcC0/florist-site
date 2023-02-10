@@ -22,9 +22,8 @@ const userSchema = new Schema({
         trim: true,
     },
     address: {
-        type: String,
-        required: true,
-        //potetntially may have  to seperate out for each line
+        type: Schema.Types.ObjectId,
+        ref: 'Address',
     },
     password: {
         type: String,
