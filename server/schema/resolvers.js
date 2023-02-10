@@ -82,10 +82,8 @@ const resolvers = {
 
     },
     //TODO: look at how to do password recovery
-    //TODO: look at how to do admin auth
-    //need create updateCartAdd, updateCartDelete, updateOrder, 
-    //  createOrder,  createCart, createAddress,
-    //  deleteCart, updateOrderStatus, deleteOrder
+    //TODO: look at how to do admin auth and guest auth
+    // deleteOrder
     Mutation: {
         createUser: async (parent, args) => {
             const user = await User.create(args);
@@ -246,13 +244,152 @@ const resolvers = {
         }
         return newAddress;
        }, 
+       //need a context for guest 
+       createCart: async (parent, {cartInfo}, context) => {
+        if(context.user){
+            const newCart  = await Cart.create({
+                created: Date.now
+            });
+    
+            const updatedCart = await Cart.findOneAndUpdate(
+                {_id: newCart._id},
+                {$push: {allCartProducts: cartInfo.product._id}},
+                {new:true},
+            )
+    
+            const updatedUser = await User.findOneAndUpdate(
+                {_id: context.user._id},
+                {$push: {cart: newCart._id}}
+            )
+            return newCart;
+        } else {
+            throw new AuthenticationError ('You are not allowed to access this content');
+        }
+       },
+       //need to have subtotal calculation,
+       //tax calculation
+       //total calculation as each item is added 
 
-       
+       //create order needs to pass through all the cart info
+       //set status
+       //address
+       //whether pickup or delivery
 
-       
+       updateCartAdd: async(parent, {cartInfo}, context ) => {
+            try {
+                if(context.user){
+                    const updatedCart = await Cart.findOneAndUpdate(
+                        {_id: cartInfo._id},
+                        {$push: {allCartProducts: cartInfo.newProduct}},
+                        { new: true},
+                    )
+                // add to subtotal
+                //recalculate tax
+                // recalculate total with tax
+                } else {
+                    throw new AuthenticationError("You do not have access to this feature")
+                }
+            } catch (error) {
+                console.log(error)
+            }
+       },
 
+       updateCartDelete: async (parent, {cartInfo}, context) => {
+         try {
+            const updatedCart = await Cart.findOneAndUpdate(
+                {_id: cartInfo._id},
+                {$pull: {allCartProducts: cartInfo.productId}},
+                {new: true},
+            )
+            //need to update subtotal
+            //recalculate tax
+            //update total
+         } catch (error) {
+            console.log(error);
+         };
+       },
 
+       deleteCart: async (parent, {cartInfo}, context) => {
+        try {
+            if(!context.user || cartInfo.allCartProducts.length < 0){
+                const deletedCart = await Cart.destroy(
+                    {_id: cartInfo._id},
+                    {new: true}
+                )
+                return deletedCart
+            }
+        } catch (error) {
+            console.log(error)
+        }
+       },
 
+       createOrder: async (parent, {orderInfo}, context ) => {
+        try {
+            const newOrder = await Order.create();
 
+            const updatedOrder = await Order.findOneAndUpdate(
+                {_id:  newOrder._id},
+                { $push: {cart: orderInfo.cart,
+                        address: orderInfo.address,
+                        user: context._id}},
+
+            ).populate('cart', 'address');
+        
+            return updatedOrder;
+        } catch (error) {
+            console.log(error)
+        }
+       },
+
+       updatedOrderStatus: async (parent, {orderStatus}, context) => {
+        try {
+            if(orderStatus.message === "Processed"){
+                const updatedOrder = await Order.findOneAndUpdate(
+                    {_id: orderStatus._id},
+                    {$set: {isProcessed: true}},
+                    { new: true},
+                )
+                return updatedOrder;
+            }
+            if (orderStatus.message === 'Shipped'){
+                const updatedOrder = await Order.findOneAndUpdate(
+                    {_id: orderStatus._id},
+                    {$set: {isShipped: true}},
+                    { new: true},
+                )
+                return updatedOrder;
+            }
+            if (orderStatus.message === 'Delivered'){
+                const updatedOrder = await Order.findOneAndUpdate(
+                    {_id: orderStatus._id},
+                    {$set: {isDelivered: true}},
+                    { new: true},
+                )
+                return updatedOrder;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+       },
+
+       cancelOrder: async (parent, {orderInfo}, context) => {
+            try {
+                if(context.user){
+                    const cancelledOrder = await Order.destroy(
+                        {_id: orderInfo._id},
+                        {new: true}
+                    )
+
+                    return cancelledOrder;
+                } else {
+                    throw new AuthenticationError("You are not able to delete this order")
+                }
+                
+            } catch (error) {
+                console.log(error)
+            }
+       },
     }
 }
+
+module.exports = resolvers;

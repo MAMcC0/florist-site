@@ -1,18 +1,30 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
+const { applyMiddleware } = require('graphql-middleware')
 const path = require('path');
+const { makeExecutableSchema } = require('@graphql-tools/schema')
 const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schema');
+const permissions = require('./utils/permissions')
 const db = require('./config/connection');
 //sets port if hosted to host url or on local port 3001
 const PORT = process.env.PORT || 3001;
 const app = express();
-//creates apollo server using typeDef resolvers and sets context to our authorization page
-const server = new ApolloServer({
+
+const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
-  context: authMiddleware
+})
+//creates apollo server using typeDef resolvers and sets context to our authorization page
+const server = new ApolloServer({
+  schema: applyMiddleware(schema, permissions),
+  resolvers,
+  context: ({ req }) => {
+    return {
+      user: req.headers.user || "",
+    };
+  },
 });
 
 app.use(express.urlencoded({ extended: false }));

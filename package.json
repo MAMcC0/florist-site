@@ -4,25 +4,28 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-      "start": "node server/server.js",
-      "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
-      "install": "cd server && npm i && cd ../client && npm i",
-      "seed": "cd server && npm run seed",
-      "build": "cd client && npm run build"
+        "start": "node server/server.js",
+        "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "seed": "cd server && npm run seed",
+        "build": "cd client && npm run build"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-      "concurrently": "^7.0.0"
+        "concurrently": "^7.0.0"
     },
     "dependencies": {
-      "@emotion/react": "^11.10.0",
-      "@emotion/styled": "^11.10.0",
-      "@mui/material": "^5.9.3",
-      "@trimbleinc/modus-react-bootstrap": "^1.1.1",
-      "bootstrap": "^5.2.0",
-      "jwt-decode": "^3.1.2",
-      "react-bootstrap": "^2.4.0"
+        "@emotion/react": "^11.10.0",
+        "@emotion/styled": "^11.10.0",
+        "@graphql-tools/schema": "^9.0.16",
+        "@mui/material": "^5.9.3",
+        "@trimbleinc/modus-react-bootstrap": "^1.1.1",
+        "bootstrap": "^5.2.0",
+        "graphql-middleware": "^6.1.33",
+        "graphql-shield": "^7.6.5",
+        "jwt-decode": "^3.1.2",
+        "react-bootstrap": "^2.4.0"
     }
-  }
+}

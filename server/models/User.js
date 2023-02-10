@@ -6,19 +6,16 @@ const bcrypt = require('bcrypt');
 const userSchema = new Schema({
     email: {
         type: String,
-        required: true,
         unique: true,
         match:[/.+@.+\..+/, 'Must match an email address!'],
     },
     phone: {
         type: String,
-        required: true,
         unique: true,
         match: [0-9, "Please include only numbers"],
     },
     name: {
         type: String,
-        required: true,
         trim: true,
     },
     address: {
@@ -27,7 +24,6 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        required: true,
         minlength: 8,
     },
     orders: [
@@ -42,6 +38,11 @@ const userSchema = new Schema({
             ref: "Cart",
         },
     ],
+    role: {
+        type: String,
+        enum: ['user', 'admin', 'guest'],
+        default: 'guest'
+    },
 });
 
 //hashes the users password pre save to database for security
