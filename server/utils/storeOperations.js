@@ -38,8 +38,8 @@ exports.calculateSalesTax = order => {
 
         order.total = this.orderTotal(order);
         order.totalTax = parseFloat(
-            Number(order.totalTax.toFixed(2));
-        )
+            Number(order.totalTax.toFixed(2))
+        );
         order.totalWithTax = parseFloat(Number(order.totalWithTax.toFixed(2)));
         return order;
     } catch (error) {
