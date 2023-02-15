@@ -60,6 +60,18 @@ const typeDefs = gql `
         zipcode: Int
     }
 
+    input Category {
+        title: String
+        products: [Product]
+        tagline: String
+    }
+
+    input Product {
+        images: [String!]
+        price: Number
+        description: String!
+    }
+
     type Auth {
         token: ID!
         user: User
