@@ -1,6 +1,6 @@
 const { ForbiddenError } = require('apollo-server-express');
 
-const { rule, shield, allow, deny, and, or } = require('graphql-shield');
+const { rule, shield, and, or } = require('graphql-shield');
 const { Rule } = require('graphql-shield/typings/rules');
 
 //Rules for auth
