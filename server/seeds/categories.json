@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Valentine's Day",
+        "products": [],
+        "tagline": "For that special person in your life!"
+    },
+    {
+        "title": "Mother's Day",
+        "products": [],
+        "tagline": "Celebrate mom with a festive bunch of flowers"
+    },
+    {
+        "title": "Birthday",
+        "products": [],
+        "tagline": "Nothing says 'I'm happy you're here' like a birthday bouquet!"
+    },
+    {
+        "title": "Sympathy",
+        "products": [],
+        "tagline": "A way to express your condolences"
+    },
+    {
+        "title": "Get Well Soon",
+        "products": [],
+        "tagline": "For the person that's going through it!"
+    }
+]
