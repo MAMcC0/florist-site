@@ -1,8 +1,233 @@
 [
     {
-      "images": [""],
-      "title": ""
+      "images": ["../media/pexels-anton-mislawsky-226145.jpg"],
+      "title": "California Costal",
       "price":  76.00,
-       
-    }
+      "description": "Bright roses, evergreen leaves and succulents"
+    },
+    {
+        "images": ["../media/pexels-brigitte-tohm-378006.jpg"],
+        "title": "Sunday Morning Pink",
+        "price":  34.00,
+        "description": "Bright pink tulips, allowed to fully bloom for a beautiful display"
+    },
+      {
+        "images": ["../media/pexels-david-bartus-714918.jpg"],
+        "title": "Road to Roses",
+        "price":  54.00,
+        "description": "A layflat bouquet with multicolored roses for every occasion"
+      },
+      {
+        "images": ["../media/pexels-dominika-roseclay-1179026.jpg"],
+        "title": "Call me Lily",
+        "price":  44.00,
+        "description": "Fuschia lilies for any important person in your life"
+      },
+      {
+        "images": ["../media/pexels-anton-mislawsky-226145.jpg"],
+        "title": "California Costal",
+        "price":  76.00,
+        "description": "Bright roses, evergreen leaves and succulents"
+      },
+      {
+        "images": ["../media/pexels-dương-nhân-1590077.jpg"],
+        "title": "Starburst",
+        "price":  55.00,
+        "description": "Large potted succulent to let any special person know you're thinking of them"
+      },
+      {
+        "images": ["../media/pexels-elina-sazonova.jpg", "../media/pexels-elina-sazonova-1927227.jpg"],
+        "title": "Pomegranate Passion",
+        "price":  87.00,
+        "description": "A beautiful blood red bouqet with carnations roses, pomegrates and greenery"
+      },
+      {
+        "images": ["../media/pexels-hassan-ouajbir-1324973.jpg"],
+        "title": "Snowblud",
+        "price":  22.00,
+        "description": "An elegant box bouqet with white carnations, red roses, and baby's breath."
+      },
+      {
+        "images": ["../media/pexels-jassan-ouajbir-2232566.jpg"],
+        "title": "Green Peace",
+        "price":  34.00,
+        "description": "Greenery for the love in your life"
+      },
+      {
+        "images": ["../media/pexels-heather-bozman.jpg"],
+        "title": "Sunrise",
+        "price":  43.00,
+        "description": "Orange tiger lilies, red carnations and yellow dahlias"
+      },
+      {
+        "images": ["../media/pexels-julia-kuzenkov-1974508.jpg"],
+        "title": "Montserra",
+        "price":  83.00,
+        "description": "Greenery for the love in your life"
+      },
+      {
+        "images": ["../media/pexels-jassan-ouajbir-2232566.jpg"],
+        "title": "Green Peace",
+        "price":  34.00,
+        "description": "Greenery for the love in your life"
+      },
+      {
+        "images": ["../media/pexels-karolina-grabowska-4207475.jpg"],
+        "title": "Spring Elevation",
+        "price":  42.00,
+        "description": "Blue bells, cherry blossomes and yellow lilies"
+      },
+      {
+        "images": ["../media/pexels-karolina-grabowska-5713661.jpg"],
+        "title": "ValenTime",
+        "price":  38.00,
+        "description": "A dozen red roses, and a chocolate box for your the special person in your life"
+      },
+      {
+        "images": ["../media/pexels-karolina-grabowska-6757651.jpg"],
+        "title": "Tuscan Paradise",
+        "price":  88.00,
+        "description": "Cream tulips and daisies in a terrcotta vase"
+      },
+      {
+        "images": ["../media/pexels-kristina-puakshtite-112394.jpg"],
+        "title": "Spring Wonder",
+        "price":  39.00,
+        "description": "Pink and yellow tulips in a red vase"
+      },
+      {
+        "images": ["../media/pexels-kristina-puakshtite-112396.jpg"],
+        "title": "Twilight Ways",
+        "price":  39.00,
+        "description": "Sunflowers, white daises and purple flowers"
+      },
+      {
+        "images": ["../media/pexels-kristina-puakshtite-112824.jpg"],
+        "title": "Cozy Coastal",
+        "price":  23.00,
+        "description": "Red dahlias with white lilies"
+      },
+      {
+        "images": ["../media/pexels-kristina-puakshtite-2317922.jpg"],
+        "title": "Yellow Blaze",
+        "price":  45.00,
+        "description": "A bunch of yellow buttercups"
+      },
+      {
+        "images": ["../media/pexels-lukas-306066.jpg"],
+        "title": "Sheer Elegance",
+        "price":  39.00,
+        "description": "A white rose bouquet for the special person in your life"
+      },
+      {
+        "images": ["../media/pexels-melike-benli-7470510.jpg"],
+        "title": "Bright Brunch Bunch",
+        "price":  39.00,
+        "description": "Fuschia peonies"
+      },
+      {
+        "images": ["../media/pexels-rodnae-productions-6709056.jpg"],
+        "title": "Bearly Stand It",
+        "price":  39.00,
+        "description": "A red rose bear shaped gift for that special someone"
+      },
+      {
+        "images": ["../media/pexels-rodnae-productions-7763962.jpg"],
+        "title": "Love, Mom",
+        "price":  23.00,
+        "description": "Pink and yellow runuculuses in a coffee mug perfect for mom"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931147.jpg"],
+        "title": "Fall in Love",
+        "price":  45.00,
+        "description": "A gorgeous bouquet of lilies, roses, runuculuses, and peonies"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931154.jpg"],
+        "title": "Secret Garden",
+        "price":  94.00,
+        "description": "Pink and yellow roses surrounded by eucalyptus in a specialitye box for that special someone"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931158.jpg"],
+        "title": "Morning Breeze",
+        "price":  39.00,
+        "description": "Peach and yellow ranunculuses with eucalyptus - comes with a square shaped box"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931174.jpg"],
+        "title": "Peach Prize",
+        "price":  56.00,
+        "description": "Peach roses arranged with greenery"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931176.jpg"],
+        "title": "Pure Wonder",
+        "price":  45.00,
+        "description": "Just pink ranunculuses"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-931179.jpg"],
+        "title": "Thinking of Your",
+        "price":  56.00,
+        "description": "Rose bouquet"
+      },
+      {
+        "images": ["../media/pexels-secret-garden-2879812.jpg"],
+        "title": "Picture Perfect",
+        "price":  43.00,
+        "description": "Daisys and Lilies come together for an incredible bouquet for an incredible person."
+      },
+      {
+        "images": ["../media/pexels-secret-garden-2879813.jpg", "../media/pexels-secret-garden-2879820(1).jpg"  ],
+        "title": "MoMA",
+        "price":  56.00,
+        "description": "Pink and yellow tulips team up with pink ranuculi for a beautiful bouquet anyone will love."
+      },
+      {
+        "images": ["../media/pexels-secret-garden-2879815(1).jpg"],
+        "title": " Purple MoMA",
+        "price":  56.00,
+        "description": "Purple calla lilies and pink peonies arranged beautifully in a stone vase."
+      },
+      {
+        "images": ["../media/pexels-secret-garden-2879819.jpg"],
+        "title": "Bright Summer",
+        "price":  56.00,
+        "description": "Blood orange ranuculi and blossoms harmonously in a stoneware vase."
+      },
+      {
+        "images": ["../media/pexels-secret-garden-2879813.jpg"],
+        "title": "Pink Dreams",
+        "price":  56.00,
+        "description": "Pink tulips in an earthenware milk jug"
+      },
+      {
+        "images": ["../media/pexels-valeria-boltneva-14401.jpg"],
+        "title": "Splash",
+        "price":  48.00,
+        "description": "A medley of bright colors for someone dear"
+      },
+      {
+        "images": ["../media/pexels-ylanite-koppens-1906446.jpg"],
+        "title": "Firework",
+        "price": 23.00,
+        "description": "Mulitcolored tulips because you can"
+      },
+      {
+        "images": ["../media/pexels-zoe-pappas-2115971.jpg"],
+        "title": "Flame",
+        "price":  74.00,
+        "description": "A medley of bright colors for someone dear"
+      },
+      {
+        "images": ["../media/QueenBee_Deluxe_Over_0872.avif"],
+        "title": "Bright Morning",
+        "price":  48.00,
+        "description": "A medley of bright colors for someone dear"
+      }
+      
+      
+
 ]
