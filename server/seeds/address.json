@@ -1,0 +1,53 @@
+[ 
+    {
+        "streetAddress": " 12334 Crouch Rd",
+        "city": "Townsville",
+        "state": "CA",
+        "zipcode": 92310
+    },
+    {
+        "streetAddress": " 12331 Rain Dr",
+        "secondaryAddress": "APT 2",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 92234
+    },
+    {
+        "streetAddress": " 12334 Slough Rd",
+        "secondaryAddress": "W202",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 23423
+    },
+    {
+        "streetAddress": " 12341 Maker Rd",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 96435
+    },
+    {
+        "streetAddress": " 18374 Linden Ave",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 12364
+    },
+    {
+        "streetAddress": "23409 Mifflin Dr",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 23423
+    },
+    {
+        "streetAddress": "23490 Ottawa Rd",
+        "secondaryAddress": "34",
+        "city": "Victorville",
+        "state": "CA",
+        "zipcode": 23461
+    },
+    {
+        "streetAddress": "23923 Dunder Ave",
+        "city": "Scranton",
+        "state": "PA",
+        "zipcode": 12032
+    }
+]
