@@ -2,6 +2,7 @@
     {
       "email": "test@test.com",
       "phone": "7603942093",
+      "password": "guestPassword",
       "name": "John Thomas",
       "address": [],
       "orders": [],
@@ -44,6 +45,7 @@
     {
       "email": "Timmer321@aol.com",
       "phone": "2304322304",
+      "password": "guestPassword",
       "name": "Andy Bernard",
       "address": [],
       "orders": [],
@@ -64,6 +66,7 @@
     {
       "email": "phillyJim@aol.com",
       "phone": "2345678912",
+      "password": "guestPassword",
       "name": "Jim Halpert",
       "address": [],
       "orders": [],

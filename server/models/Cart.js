@@ -1,10 +1,10 @@
-const { Schema, model, Mongoose } = require('mongoose');
+const { Schema, model} = require('mongoose');
 
 
 
 const cartSchema = new Schema({
     allCartProducts: [{
-        type: Mongoose.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Product'
     }],
     user: {
@@ -12,10 +12,10 @@ const cartSchema = new Schema({
         ref: 'User',
         required: false,
     },
-    updated: new Date,
+    updatedAt: Date,
     created: {
         type: Date,
-        default: Date.now,
+        default: Date,
     },
     subtotalPrice: {
         type: Number,

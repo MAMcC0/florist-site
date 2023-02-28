@@ -12,16 +12,15 @@ const userSchema = new Schema({
     phone: {
         type: String,
         unique: true,
-        match: [0-9, "Please include only numbers"],
     },
     name: {
         type: String,
         trim: true,
     },
-    address: {
+    address: [{
         type: Schema.Types.ObjectId,
         ref: 'Address',
-    },
+    }],
     password: {
         type: String,
         minlength: 8,
